@@ -33,7 +33,7 @@ const postCard = (time,firstName,lastName,text,title,profilePic)=>{
 window.addEventListener("load",async function(){
     const user = JSON.parse(localStorage.getItem("user"))
     if(user){
-      window.location.replace("./dashboard/dashboard.html")
+      window.location.replace("./dashboard.html")
       return
     }
     let postBox = this.document.getElementById("postBox")

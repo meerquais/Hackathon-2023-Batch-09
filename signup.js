@@ -4,7 +4,7 @@ import {
     createUserWithEmailAndPassword,
     doc,
     setDoc,
-} from "../firebase.js";
+} from "./firebase.js";
 
 
 const SignupBtn = document.getElementById("sign-up");

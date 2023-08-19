@@ -1,4 +1,4 @@
-import { auth, db, doc,getDownloadURL,onAuthStateChanged, getDoc,updateDoc,uploadBytesResumable , ref, storage, collection,getDocs, addDoc, serverTimestamp , query , orderBy, deleteDoc} from '../firebase.js';
+import { auth, db, doc,getDownloadURL,onAuthStateChanged, getDoc,updateDoc,uploadBytesResumable , ref, storage, collection,getDocs, addDoc, serverTimestamp , query , orderBy, deleteDoc} from './firebase.js';
 
 
 // Get the user data from localStorage

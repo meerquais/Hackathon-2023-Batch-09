@@ -1,4 +1,4 @@
-import { auth, db, doc, getDoc, signInWithEmailAndPassword } from '../firebase.js';
+import { auth, db, doc, getDoc, signInWithEmailAndPassword } from './firebase.js';
 
 const loginBtn = document.getElementById('loginBtn');
 const emailInput = document.getElementById('email');
@@ -62,7 +62,7 @@ function handleLoginError(errorMessage) {
 }
 
 function redirectToDashboard() {
-    window.location.assign("../dashboard/dashboard.html");
+    window.location.assign("./dashboard.html");
 }
 
 function disableLoginButton() {
