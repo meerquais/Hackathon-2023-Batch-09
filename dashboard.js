@@ -121,7 +121,7 @@ const qry = query(collection(db,"posts"),orderBy("time"));
     const querySnapshot = await getDocs(qry).then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
             const { time, firstName, lastName, text, title, uId } = doc.data();
-            const card = postCard(time, firstName, lastName, text, title, uId);
+            const card = postCard(time, firstName, lastName, text, title, doc.id);
             postBox.innerHTML = card + postBox.innerHTML;
         });
     }).catch((error) => {
