@@ -91,11 +91,12 @@ publish.addEventListener("click",async ()=>{
           }
 
             const docRef = await addDoc(collection(db, "posts"),obj);
+            console.log(docRef)
             const getDocRef = doc(db, "posts", docRef.id);
             const docSnap = await getDoc(getDocRef);
             const {time,firstName,lastName,text,title,uId} = docSnap.data();
             const postBox = document.getElementById("postBox")
-            const card = postCard(time,firstName,lastName,text,title,uId)
+            const card = postCard(time,firstName,lastName,text,title,docRef.id)
             postBox.innerHTML += card
             publish.innerHTML = `Publish Blog`
               publish.style.pointerEvents = "auto"
