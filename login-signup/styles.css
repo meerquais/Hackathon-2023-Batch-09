@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden; /* Hide scrollbars on the body */
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: white;
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+}
+.forms-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 50px rgba(10, 10, 10, 0.1);
+    width: 350px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+.input-container i{
+    position: absolute;
+    right:3%;
+    top: 5%;
+    bottom: 10%;
+    color: #999;
+    cursor: pointer;
+    /* display: none; */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* margin-bottom: 10px; */
+}
+
+input[type="password"] {
+    padding-right: 9px;
+}
+
+i.fa-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+input[type="password"].show-password + .fa-eye-slash {
+    right: 10px;
+}
+
+select{
+    margin-bottom: 10px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Hide signup form by default */
+.signup-form {
+    display: none;
+}
+
+.active-form {
+    display: block;
+}
+
+.bg-color{
+    background-color: #7749F8;
+    color: #fff !important;
+}
+.bg-nav{
+    background-color: white;
+    color: #fff !important;
+}
+
+/* media here  */
+
+@media (max-width: 480px) {
+    input[type="password"] {
+        padding-right: 9px;
+    }
+
+
+    input[type="password"].show-password + .fa-eye-slash {
+        right: 5px;
+    }
+}
